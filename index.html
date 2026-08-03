@@ -22,6 +22,28 @@
     <p>
     <img src="images/noeetmoi.jpg" width="300px"/>
     </p>
+    <!-- L'image a un id="maPhoto" et un événement onclick -->
+<img 
+    id="maPhoto" 
+    src="images/benyapasfoot2.jpg" 
+    alt="Clique pour changer" 
+    width="300" 
+    style="cursor: pointer;" 
+    onclick="changerPhoto()"
+>
+
+<!-- Le script qui fait le changement -->
+<script>
+    function changerPhoto() {
+        var image = document.getElementById('maPhoto');
+        // Si c'est la photo 1, on met la photo 2. Sinon, on remet la photo 1.
+        if (image.src.includes("benyapasfoot2")) {
+            image.src = "images/jesuisaufoot.jpg";
+        } else {
+            image.src = "images/benyapasfoot2.jpg";
+        }
+    }
+</script>
     <p>
     j’étais stressée depuis<br/>
     presque une semaine<br/>
