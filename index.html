@@ -22,28 +22,46 @@
     <p>
     <img src="images/noeetmoi.jpg" width="300px"/>
     </p>
-    <!-- L'image a un id="maPhoto" et un événement onclick -->
+<p>
+<!-- Image interactive avec script de rotation -->
 <img 
-    id="maPhoto" 
+    id="photoFoot" 
     src="images/benyapasfoot2.jpg" 
-    alt="Clique pour changer" 
+    alt="Galerie foot : cliquez pour changer" 
     width="300" 
     style="cursor: pointer;" 
-    onclick="changerPhoto()"
+    onclick="changerImage()"
 >
 
-<!-- Le script qui fait le changement -->
+<!-- Le script qui gère la rotation des 6 images -->
 <script>
-    function changerPhoto() {
-        var image = document.getElementById('maPhoto');
-        // Si c'est la photo 1, on met la photo 2. Sinon, on remet la photo 1.
-        if (image.src.includes("benyapasfoot2")) {
-            image.src = "images/jesuisaufoot.jpg";
-        } else {
-            image.src = "images/benyapasfoot2.jpg";
+    // Liste des images dans l'ordre exact que vous avez demandé
+    const galerie = [
+        "images/benyapasfoot2.jpg",
+        "images/jesuisaufoot.jpg",
+        "images/jeseraienretardaufootonsevoitaufoot.jpg",
+        "images/cestquoiladresseduterraindefooot.jpg",
+        "images/dimancheavantlefoot.jpg",
+        "images/tuasfootaquelleheure.jpg"
+    ];
+
+    // Variable pour se souvenir de l'image actuelle (on commence à 0)
+    let indexActuel = 0;
+
+    function changerImage() {
+        // On passe à l'image suivante
+        indexActuel = indexActuel + 1;
+
+        // Si on dépasse la dernière image, on revient à la première (boucle)
+        if (indexActuel >= galerie.length) {
+            indexActuel = 0;
         }
+
+        // On change la source de l'image affichée
+        document.getElementById("photoFoot").src = galerie[indexActuel];
     }
 </script>
+</p>
     <p>
     j’étais stressée depuis<br/>
     presque une semaine<br/>
