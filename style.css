@@ -1,3 +1,9 @@
+body {
+    font-family: homoneta;
+    src: url(jeanne.correaluna/Bureau/testsitetext/homoneta-main2copie);
+    font-weight: 400;
+    font-size: medium;
+}
 #intro {
     font-weight: bold;
     font-size: large;
@@ -7,9 +13,6 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
 }
-body {
-    font-family: homoneta;
-    src: url(jeanne.correaluna/Bureau/testsitetext/homoneta-main2copie);
-    font-weight: 400;
-    font-size: medium;
+#liens {
+    color: #ff00b3;
 }
